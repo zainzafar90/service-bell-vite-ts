@@ -50,6 +50,7 @@ export const WidgetHomeView = () => {
               Chat With Us
             </Button>
           </ButtonGroup>
+
           <WidgetHelpSection />
         </div>
       </div>
