@@ -1,0 +1,24 @@
+.widgetSlideOver {
+  width: 100%;
+  position: relative;
+  top: -28rem;
+  z-index: 1;
+}
+
+// Animation Slide Over
+.slideOver {
+  animation: slideOver 0.3s ease-in-out;
+}
+
+.slideOut {
+  animation: slideOut 0.3s ease-in-out;
+}
+
+@keyframes slideOver {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

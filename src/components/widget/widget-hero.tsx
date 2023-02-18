@@ -5,8 +5,8 @@ import styles from "./widget-hero.module.scss";
 import { AppContext } from "../../context/app-context";
 
 export const WidgetHeroSection = () => {
-  const { isWidgetExpanded, setWidgetExpanded } = useContext(AppContext);
   const [showVideo, setShowVideo] = useState(false);
+  const { isWidgetExpanded, setWidgetExpanded } = useContext(AppContext);
 
   useEffect(() => {
     const interval = setInterval(() => {

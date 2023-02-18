@@ -1,0 +1,48 @@
+.widgetAvatar {
+  display: inline-block;
+  margin-left: -0.4rem;
+
+  // Create clipping mask for avatars when overlapping each other
+  mask-image: radial-gradient(
+    ellipse 32px 60px at 1px center,
+    rgba(0, 0, 0, 0) 0.625rem,
+    #000 0.625rem
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 32px 60px at 1px center,
+    rgba(0, 0, 0, 0) 0.625rem,
+    #000 0.625rem
+  );
+
+  // Band-aid fix for clipping mask cut [can revisit later]
+  transform: rotateZ(5deg);
+
+  &:first-child {
+    margin-left: 0;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  &__Img,
+  &__Initials {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--widget-accent-color);
+    // Band-aid fix for clipping mask [can revisit later]
+    transform: rotateZ(-5deg);
+  }
+
+  &__Img {
+    object-fit: cover;
+  }
+
+  &__Initials {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}

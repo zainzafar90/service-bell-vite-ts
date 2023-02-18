@@ -1,0 +1,78 @@
+.widgetHomeView {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  &__Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  // HEADER
+  &__Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  &__CustomerLogo {
+    position: relative;
+    top: 0.25rem;
+    left: 0;
+    max-width: 6rem;
+    cursor: pointer;
+    filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.45));
+  }
+
+  &__BtnClose {
+    cursor: pointer;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: transparent;
+
+    &:hover {
+      background-color: rgb(0, 0, 0, 0.2);
+    }
+
+    &:focus {
+      outline: none;
+    }
+    img {
+      width: 1.5rem;
+      max-width: 2rem;
+    }
+  }
+  // End - HEADER
+
+  &__Body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+    width: 100%;
+    margin-top: 8rem;
+  }
+
+  &__Title {
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+    color: #fff;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45);
+    margin-bottom: 1.5rem;
+  }
+  // End - Body
+}

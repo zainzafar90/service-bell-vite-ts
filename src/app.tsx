@@ -6,7 +6,7 @@ import { AppContext } from "./context/app-context";
 import "./styles/main.scss";
 
 export const App = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
 
   return (
     <AppContext.Provider

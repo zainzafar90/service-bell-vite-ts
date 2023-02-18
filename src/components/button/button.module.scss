@@ -1,0 +1,63 @@
+.widgetButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border-width: 1px;
+  border-color: transparent;
+  background-color: var(--widget-accent-color);
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+  transition: all 200ms ease-in;
+  white-space: nowrap;
+  cursor: pointer;
+
+  img {
+    margin-right: 0.5rem;
+    width: 1.25rem;
+    max-width: 1.25rem;
+  }
+
+  // PRIMARY
+  &__Primary {
+    background-color: var(--widget-accent-color);
+  }
+
+  &__Primary:hover {
+    background-color: var(--widget-accent-hover-color);
+  }
+
+  // When the button is focused, you might see a blue outline around it. This is the default browser focus outline.
+  // We can override this with box-shadow, to remove the default outline but for now I am keeping it.
+  &__Primary:focus {
+    outline: 2px solid var(--widget-accent-color);
+    outline-offset: 2px;
+    box-shadow: none;
+  }
+
+  // SECONDARY
+  &__Secondary {
+    background-color: var(--widget-secondary-color);
+  }
+
+  &__Secondary:hover {
+    background-color: var(--widget-secondary-hover-color);
+  }
+
+  &__Secondary:focus {
+    outline: 2px solid var(--widget-secondary-color);
+    outline-offset: 2px;
+    box-shadow: none;
+  }
+}
+
+// Utility classes
+.widgetButton {
+  &__FullWidth {
+    width: 100%;
+  }
+}
