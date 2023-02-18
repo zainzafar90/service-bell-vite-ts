@@ -1,8 +1,9 @@
-import { useState } from "react";
-import { PropsWithChildren } from "react";
+import { useContext } from "react";
 
-export const Widget = (props: PropsWithChildren<{}>) => {
-  const [isExpanded, setIsExpanded] = useState(true);
+import { AppContext } from "../../context/app-context";
+
+export const Widget = () => {
+  const { isWidgetExpanded, setWidgetExpanded } = useContext(AppContext);
 
   return (
     <div className="widget">
@@ -11,7 +12,7 @@ export const Widget = (props: PropsWithChildren<{}>) => {
         <div
           className="widget--mini"
           onClick={() => {
-            setIsExpanded(true);
+            setWidgetExpanded(true);
           }}
         >
           <img className="widget__bell-logo" src="./img/bell.svg" />
@@ -27,7 +28,7 @@ export const Widget = (props: PropsWithChildren<{}>) => {
           <button
             className="widget--expanded__btn-close"
             onClick={() => {
-              setIsExpanded(false);
+              setWidgetExpanded(false);
             }}
           >
             <img src="./img/icons/close.svg" />

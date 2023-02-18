@@ -1,14 +1,16 @@
 import clx from "classnames";
-import { useState } from "react";
+import { useContext } from "react";
 import { PropsWithChildren } from "react";
 
-export const WidgetWrapper = (props: PropsWithChildren<{}>) => {
-  const [isExpanded, setIsExpanded] = useState(true);
+import { AppContext } from "../../context/app-context";
+import styles from "./widget-wrapper.module.scss";
 
+export const WidgetWrapper = (props: PropsWithChildren<{}>) => {
+  const { isWidgetExpanded } = useContext(AppContext);
   return (
     <div
-      className={clx("widget-wrapper", {
-        "widget-wrapper--expanded": isExpanded,
+      className={clx(styles.widgetWrapper, {
+        [styles.widgetWrapperExpanded]: isWidgetExpanded,
       })}
     >
       {props.children}

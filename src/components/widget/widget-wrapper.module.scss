@@ -1,0 +1,19 @@
+.widgetWrapper {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  overflow: hidden;
+  height: var(--mini-widget-height);
+  width: var(--mini-widget-width);
+  border-radius: var(--widget-border-radius);
+  z-index: var(--widget-z-index);
+  border: 0.25rem solid var(--mini-widget-border);
+  box-shadow: 0 0.25rem 0.5rem rgba(175, 184, 210, 0.6);
+  transition: var(--widget-expand-transition);
+}
+
+.widgetWrapperExpanded {
+  width: var(--expanded-widget-width);
+  height: var(--expanded-widget-height);
+  border: none;
+}
