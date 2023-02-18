@@ -9,19 +9,6 @@
     height: 100%;
   }
 
-  .widgetHeroOverlay {
-    position: absolute;
-    bottom: -2rem;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      182.66deg,
-      rgba(130, 23, 255, 0) 4.43%,
-      #8217ff 87.35%
-    );
-  }
-
   .agentImg,
   .agentVideo {
     position: absolute;
@@ -45,6 +32,29 @@
   }
 }
 
+.widgetHeroOverlay {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    182.66deg,
+    rgba(130, 23, 255, 0) 4.43%,
+    #8217ff 95%
+  );
+}
+
+.widgetHeroOverlay::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(360deg, rgba(130, 23, 255, 0) 4.43%, #8217ff 95%);
+}
+
 .widgetMini {
   display: flex;
   flex-direction: column;
@@ -56,12 +66,12 @@
   width: 100%;
   height: 100%;
 
-  &ServiceBell {
+  .widgetMiniServiceBell {
     max-width: 1.75rem;
     margin-bottom: 0.75rem;
   }
 
-  &Title {
+  .widgetMiniTitle {
     font-weight: 700;
     font-size: 1rem;
     line-height: 1rem;

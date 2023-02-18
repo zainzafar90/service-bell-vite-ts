@@ -26,13 +26,13 @@ export const WidgetHeroSection = () => {
           }}
         >
           <img className={styles.widgetMiniServiceBell} src="./img/bell.svg" />
-          <h5 className={styles.widgetMiniTitle}>Talk to an expert</h5>
+          <span className={styles.widgetMiniTitle}>Talk to an expert</span>
         </div>
       )}
       <div className={styles.widgetHeroContent}>
         <img
-          className={clx(styles.agentImg)}
           src="./img/agent.png"
+          className={clx(styles.agentImg)}
           title="Your browser does not support the <video> tag"
         />
         <video
