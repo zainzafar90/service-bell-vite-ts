@@ -1,0 +1,32 @@
+:root {
+  --bg-body-color: #ddd;
+  --font-family: "Plus Jakarta Sans", sans-serif;
+
+  // Widget
+  --widget-z-index: 999999999;
+  --widget-border-radius: 1.5rem;
+  --widget-expand-transition: width 200ms cubic-bezier(0.1, 0.2, 0.3, 0.4),
+    height 200ms cubic-bezier(0.1, 0.2, 0.3, 0.4),
+    opacity 200ms cubic-bezier(0.1, 0.2, 0.3, 0.4);
+
+  // Mini
+  --mini-widget-border: #8217ff;
+  --mini-widget-height: 11.875rem;
+  --mini-widget-width: 8.25rem;
+
+  // Expanded
+  --expanded-widget-border: transparent;
+  --expanded-widget-height: 40rem;
+  --expanded-widget-width: 24rem;
+
+  // Colors
+  --widget-accent-color: #0495d0;
+  --widget-accent-hover-color: #058abf;
+
+  --widget-secondary-color: #012b3c;
+  --widget-secondary-hover-color: #01212e;
+
+  --widget-indigo-color: #8217ff;
+
+  --widget-input-border-color: rgba(150, 156, 184, 0.18);
+}
