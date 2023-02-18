@@ -7,6 +7,7 @@ import styles from "./widget-wrapper.module.scss";
 
 export const WidgetWrapper = (props: PropsWithChildren<{}>) => {
   const { isWidgetExpanded } = useContext(AppContext);
+
   return (
     <div
       className={clx(styles.widgetWrapper, {

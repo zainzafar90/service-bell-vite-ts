@@ -1,21 +1,34 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import clx from "classnames";
 
 import styles from "./widget-hero.module.scss";
+import { AppContext } from "../../context/app-context";
 
 export const WidgetHeroSection = () => {
-  const [isVideoInFocus, setIsVideoInFocus] = useState(false);
+  const { isWidgetExpanded, setWidgetExpanded } = useContext(AppContext);
+  const [showVideo, setShowVideo] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsVideoInFocus((prev) => !prev);
+      setShowVideo((prev) => !prev);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [isVideoInFocus]);
+  }, [showVideo]);
 
   return (
     <div className={styles.widgetHero}>
+      {!isWidgetExpanded && (
+        <div
+          className={styles.widgetMini}
+          onClick={() => {
+            setWidgetExpanded(true);
+          }}
+        >
+          <img className={styles.widgetMiniServiceBell} src="./img/bell.svg" />
+          <h5 className={styles.widgetMiniTitle}>Talk to an expert</h5>
+        </div>
+      )}
       <div className={styles.widgetHeroContent}>
         <img
           className={clx(styles.agentImg)}
@@ -27,7 +40,7 @@ export const WidgetHeroSection = () => {
           muted
           loop
           className={clx(styles.agentVideo, {
-            [styles.videoInFocus]: isVideoInFocus,
+            [styles.showVideo]: showVideo,
           })}
         >
           <source src="./img/agent.mp4" type="video/mp4" />
@@ -37,8 +50,8 @@ export const WidgetHeroSection = () => {
           />
           Your browser does not support the video tag.
         </video>
+        <div className={styles.widgetHeroOverlay} />
       </div>
-      <div className={styles.widgetHeroOverlay} />
     </div>
   );
 };
