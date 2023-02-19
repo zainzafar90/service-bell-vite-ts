@@ -51,7 +51,27 @@ export const WidgetHomeView = () => {
             </Button>
           </ButtonGroup>
 
-          <WidgetHelpSection />
+          <WidgetHelpSection helpItems={[]} />
+
+          <WidgetHelpSection
+            helpItems={[
+              {
+                id: 1,
+                question: "Get setup quickly",
+                answer: "...",
+              },
+              {
+                id: 2,
+                question: "How can I embed videos?",
+                answer: "...",
+              },
+              {
+                id: 2,
+                question: "How Servicebell's plans work?",
+                answer: "...",
+              },
+            ]}
+          />
         </div>
       </div>
     </div>
