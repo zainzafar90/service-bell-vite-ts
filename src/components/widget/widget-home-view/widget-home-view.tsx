@@ -4,6 +4,7 @@ import { AppContext } from "../../../context/app-context";
 import { AgentType } from "../../../types";
 import { Avatar, AvatarGroup } from "../../avatar";
 import { Button, ButtonGroup } from "../../button";
+import { PoweredBy } from "../powered-by";
 import { WidgetHelpSection } from "./widget-help-section";
 import styles from "./widget-home-view.module.scss";
 import { WidgetLiveAgentSection } from "./widget-live-agents-section";
