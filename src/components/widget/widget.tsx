@@ -1,4 +1,3 @@
-import clx from "classnames";
 import { Fragment, useContext } from "react";
 
 import { AppContext } from "../../context/app-context";
@@ -15,14 +14,10 @@ export const Widget = () => {
     <div className={styles.widget}>
       <WidgetHeroSection />
       {isWidgetExpanded && (
-        <div
-          className={clx(styles.widgetMainContent, {
-            [styles.widgetExpanded]: isWidgetExpanded,
-          })}
-        >
+        <>
           <WidgetSlideOver />
           <WidgetNavFooter />
-        </div>
+        </>
       )}
     </div>
   );

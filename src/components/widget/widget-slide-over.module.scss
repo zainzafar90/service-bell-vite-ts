@@ -1,24 +1,42 @@
 .widgetSlideOver {
-  width: 100%;
   position: relative;
   margin-top: -28rem;
+  width: 100%;
   z-index: 1;
+  opacity: 0;
+
+  &.widgetExpanded {
+    animation-name: fadeIn;
+    animation-duration: 200ms;
+    animation-timing-function: ease-in;
+    animation-delay: 200ms;
+    animation-fill-mode: forwards;
+  }
 }
 
 // Animation Slide Over
-.slideOver {
-  animation: slideOver 0.3s ease-in-out;
-}
+// .slideOver {
+//   animation: slideOver 0.3s ease-in-out;
+// }
 
-.slideOut {
-  animation: slideOut 0.3s ease-in-out;
-}
+// .slideOut {
+//   animation: slideOut 0.3s ease-in-out;
+// }
 
-@keyframes slideOver {
+// @keyframes slideOver {
+//   0% {
+//     transform: translateX(100%);
+//   }
+//   100% {
+//     transform: translateX(0);
+//   }
+// }
+
+@keyframes fadeIn {
   0% {
-    transform: translateX(100%);
+    opacity: 0;
   }
   100% {
-    transform: translateX(0);
+    opacity: 1;
   }
 }
