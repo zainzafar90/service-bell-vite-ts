@@ -5,3 +5,11 @@ export type AgentType = {
   imgUrl: string;
   status: "online" | "offline";
 };
+
+export type ConversationType = {
+  id: number;
+  agent: AgentType;
+  lastMessage: string;
+  lastMessageTime: string;
+  unreadCount: number;
+};
