@@ -37,7 +37,7 @@ const agents: AgentType[] = [
   },
 
   {
-    id: 1,
+    id: 2,
     name: "Kathryne Murphy",
     designation: "Financial Advisor",
     imgUrl: "./img/avatars/avatar-2.jpeg",
@@ -45,7 +45,7 @@ const agents: AgentType[] = [
   },
 
   {
-    id: 1,
+    id: 3,
     name: "Leslie Watkins",
     designation: "Customer Support",
     imgUrl: "./img/avatars/avatar-3.jpeg",
