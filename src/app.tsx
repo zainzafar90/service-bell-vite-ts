@@ -6,11 +6,17 @@ import { AppContext } from "./context/app-context";
 import "./styles/main.scss";
 
 export const App = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
+  const [isConversationOpen, setIsConversationOpen] = useState(false);
 
   return (
     <AppContext.Provider
-      value={{ isWidgetExpanded: isExpanded, setWidgetExpanded: setIsExpanded }}
+      value={{
+        isWidgetExpanded: isExpanded,
+        setWidgetExpanded: setIsExpanded,
+        isConversationViewOpen: isConversationOpen,
+        setIsConversationViewOpen: setIsConversationOpen,
+      }}
     >
       <WidgetWrapper>
         <Widget />
