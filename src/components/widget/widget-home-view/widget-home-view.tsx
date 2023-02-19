@@ -1,6 +1,7 @@
 import { useContext } from "react";
 
 import { AppContext } from "../../../context/app-context";
+import { AgentType } from "../../../types";
 import { Avatar, AvatarGroup } from "../../avatar";
 import { Button, ButtonGroup } from "../../button";
 import { WidgetHelpSection } from "./widget-help-section";
@@ -22,6 +23,32 @@ const helpItems = [
     id: 3,
     question: "How Servicebell's plans work?",
     answer: "...",
+  },
+];
+
+const agents: AgentType[] = [
+  {
+    id: 1,
+    name: "Eleneor Pena",
+    designation: "Sales Trainee",
+    imgUrl: "./img/avatars/avatar-1.jpeg",
+    status: "online",
+  },
+
+  {
+    id: 1,
+    name: "Kathryne Murphy",
+    designation: "Financial Advisor",
+    imgUrl: "./img/avatars/avatar-2.jpeg",
+    status: "offline",
+  },
+
+  {
+    id: 1,
+    name: "Leslie Watkins",
+    designation: "Customer Support",
+    imgUrl: "./img/avatars/avatar-3.jpeg",
+    status: "online",
   },
 ];
 
@@ -72,7 +99,7 @@ export const WidgetHomeView = () => {
 
           <WidgetHelpSection helpItems={[]} />
 
-          <WidgetLiveAgentSection agents={[]} />
+          <WidgetLiveAgentSection agents={agents} />
 
           <WidgetHelpSection helpItems={helpItems} />
         </div>

@@ -1,8 +1,11 @@
+import { AgentType } from "../../../types";
 import { Card } from "../../card";
+import { Agent } from "../agent";
+
 import styles from "./widget-live-agents-section.module.scss";
 
 interface WidgetLiveAgentSectionProps {
-  agents: { id: number; question: string; answer: string }[];
+  agents: AgentType[];
 }
 
 export const WidgetLiveAgentSection = (props: WidgetLiveAgentSectionProps) => {
@@ -18,25 +21,21 @@ export const WidgetLiveAgentSection = (props: WidgetLiveAgentSectionProps) => {
             />
             Live Agents
           </h3>
-          <img src="./img/icons/right-chevron.svg" />
+          <div className={styles.widgetLiveAgentSection__Right}>
+            <span className={styles.widgetLiveAgentSection__Badge}>9</span>
+            <img src="./img/icons/right-chevron.svg" />
+          </div>
         </div>
 
         {props.agents?.length > 0 && (
-          <div className={styles.widgetLiveAgentSection__LiveAgentItems}>
+          <ul
+            role="list"
+            className={styles.widgetLiveAgentSection__LiveAgentItems}
+          >
             {props.agents.map((agent) => (
-              <div
-                className={styles.widgetLiveAgentSection__LiveAgentItem}
-                key={agent.id}
-              >
-                <h5
-                  className={styles.widgetLiveAgentSection__LiveAgentItemTitle}
-                >
-                  {agent.question}
-                </h5>
-                <img src="./img/icons/right-chevron.svg" />
-              </div>
+              <Agent agent={agent} key={agent.id} />
             ))}
-          </div>
+          </ul>
         )}
       </Card>
     </div>

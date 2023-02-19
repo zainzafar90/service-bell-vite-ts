@@ -1,0 +1,70 @@
+.widgetLiveAgentSection {
+  &__AgentItemLeft {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__AgentItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background: #f5f5f5;
+    }
+  }
+
+  &__AgentItemAvatar {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: #f5f5f5;
+  }
+
+  &__AgentItemStatus {
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 1px solid #ffffff;
+
+    &--online {
+      background: #00b87c;
+    }
+
+    &--offline {
+      background: #bfbfbf;
+    }
+  }
+
+  &__AgentItemName {
+    font-size: 0.875rem;
+    line-height: 1rem;
+    font-weight: 600;
+    color: #292018;
+  }
+
+  &__AgentItemDesignation {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+    color: #6e738d;
+  }
+
+  &__AgentItemRight {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+  }
+}
