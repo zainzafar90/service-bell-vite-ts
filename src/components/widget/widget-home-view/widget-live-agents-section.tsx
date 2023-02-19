@@ -1,4 +1,5 @@
 import { AgentType } from "../../../types";
+import { Button } from "../../button";
 import { Card } from "../../card";
 import { Agent } from "../agent";
 
@@ -35,6 +36,10 @@ export const WidgetLiveAgentSection = (props: WidgetLiveAgentSectionProps) => {
             {props.agents.map((agent) => (
               <Agent agent={agent} key={agent.id} />
             ))}
+
+            <li className={styles.widgetLiveAgentSection__AgentItem}>
+              <Button fullWidth>View All Agents</Button>
+            </li>
           </ul>
         )}
       </Card>
