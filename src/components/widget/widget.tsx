@@ -1,4 +1,5 @@
-import { useContext } from "react";
+import { Fragment, useContext } from "react";
+
 import { AppContext } from "../../context/app-context";
 import { WidgetNavFooter } from "./footer";
 import { WidgetHeroSection } from "./widget-hero";
@@ -12,8 +13,12 @@ export const Widget = () => {
   return (
     <div className={styles.widget}>
       <WidgetHeroSection />
-      {isWidgetExpanded && <WidgetSlideOver />}
-      <WidgetNavFooter />
+      {isWidgetExpanded && (
+        <Fragment>
+          <WidgetSlideOver />
+          <WidgetNavFooter />
+        </Fragment>
+      )}
     </div>
   );
 };
