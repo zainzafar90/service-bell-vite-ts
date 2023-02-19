@@ -5,6 +5,25 @@ import { Avatar, AvatarGroup } from "../../avatar";
 import { Button, ButtonGroup } from "../../button";
 import { WidgetHelpSection } from "./widget-help-section";
 import styles from "./widget-home-view.module.scss";
+import { WidgetLiveAgentSection } from "./widget-live-agents-section";
+
+const helpItems = [
+  {
+    id: 1,
+    question: "Get setup quickly",
+    answer: "...",
+  },
+  {
+    id: 2,
+    question: "How can I embed videos?",
+    answer: "...",
+  },
+  {
+    id: 3,
+    question: "How Servicebell's plans work?",
+    answer: "...",
+  },
+];
 
 export const WidgetHomeView = () => {
   const { setWidgetExpanded } = useContext(AppContext);
@@ -53,25 +72,9 @@ export const WidgetHomeView = () => {
 
           <WidgetHelpSection helpItems={[]} />
 
-          <WidgetHelpSection
-            helpItems={[
-              {
-                id: 1,
-                question: "Get setup quickly",
-                answer: "...",
-              },
-              {
-                id: 2,
-                question: "How can I embed videos?",
-                answer: "...",
-              },
-              {
-                id: 2,
-                question: "How Servicebell's plans work?",
-                answer: "...",
-              },
-            ]}
-          />
+          <WidgetLiveAgentSection agents={[]} />
+
+          <WidgetHelpSection helpItems={helpItems} />
         </div>
       </div>
     </div>
