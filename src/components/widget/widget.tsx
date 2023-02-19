@@ -1,4 +1,4 @@
-import { Fragment, useContext } from "react";
+import { useContext } from "react";
 
 import { AppContext } from "../../context/app-context";
 import { WidgetNavFooter } from "./footer";
@@ -13,6 +13,7 @@ export const Widget = () => {
   return (
     <div className={styles.widget}>
       <WidgetHeroSection />
+
       {isWidgetExpanded && (
         <>
           <WidgetSlideOver />
