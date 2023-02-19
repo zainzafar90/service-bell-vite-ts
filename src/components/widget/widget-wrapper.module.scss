@@ -10,10 +10,25 @@
   border: 0.25rem solid var(--mini-widget-border);
   box-shadow: 0 0.25rem 0.5rem rgba(175, 184, 210, 0.6);
   transition: var(--widget-expand-transition);
+
+  &.widgetWrapperExpanded {
+    width: var(--expanded-widget-width);
+    height: var(--expanded-widget-height);
+    border: none;
+    animation: bounceIn 0.5s;
+  }
 }
 
-.widgetWrapperExpanded {
-  width: var(--expanded-widget-width);
-  height: var(--expanded-widget-height);
-  border: none;
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
 }

@@ -32,7 +32,7 @@ export const WidgetHeroSection = () => {
       <div className={styles.widgetHeroContent}>
         <img
           src="./img/agent.png"
-          className={clx(styles.agentImg)}
+          className={styles.agentImg}
           title="Your browser does not support the <video> tag"
         />
         <video
@@ -46,6 +46,7 @@ export const WidgetHeroSection = () => {
           <source src="./img/agent.mp4" type="video/mp4" />
           <img
             src="./img/agent.png"
+            className={styles.agentImg}
             title="Your browser does not support the <video> tag"
           />
           Your browser does not support the video tag.

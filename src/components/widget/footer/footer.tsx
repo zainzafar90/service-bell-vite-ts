@@ -6,6 +6,8 @@ import { PoweredBy } from "../powered-by";
 import styles from "./footer.module.scss";
 
 export const WidgetNavFooter = () => {
+  const isActive = true;
+
   return (
     <>
       <footer className={styles.widgetFooter}>
@@ -15,7 +17,7 @@ export const WidgetNavFooter = () => {
               <button
                 className={clx(
                   styles.widgetFooterNavContent__button,
-                  true && styles["widgetFooterNavContent__button--active"]
+                  isActive && styles["widgetFooterNavContent__button--active"]
                 )}
               >
                 <span>
@@ -26,7 +28,7 @@ export const WidgetNavFooter = () => {
             </li>
 
             <li>
-              <button className={clx(styles.widgetFooterNavContent__button)}>
+              <button className={styles.widgetFooterNavContent__button}>
                 <span className={styles.badgeWrapper}>
                   <ChatIcon />
                   <span className={styles.badge}>8</span>
@@ -36,7 +38,7 @@ export const WidgetNavFooter = () => {
             </li>
 
             <li>
-              <button className={clx(styles.widgetFooterNavContent__button)}>
+              <button className={styles.widgetFooterNavContent__button}>
                 <span>
                   <CalendarIcon />
                 </span>
