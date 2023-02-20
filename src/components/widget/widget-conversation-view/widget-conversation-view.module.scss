@@ -9,6 +9,11 @@
   bottom: 0;
   z-index: 1;
   background: white;
+  animation: moveDown 500ms cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+
+  &__Open {
+    animation: moveUp 500ms cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
 
   // HEADER
   &__Header {
@@ -104,4 +109,30 @@
   }
 
   // End - Body
+}
+
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  95% {
+    transform: translateY(10rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(9999rem);
+    opacity: 0;
+  }
 }

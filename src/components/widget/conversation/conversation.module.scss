@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    width: 100%;
+    width: calc(100% - 1rem);
   }
 
   &__AgentItemAvatar {
@@ -85,8 +85,8 @@
       height: 0.75rem;
       border-radius: 50%;
       position: absolute;
-      top: 25%;
-      right: 0;
+      top: 30%;
+      right: 0.5rem;
       border: 1px solid #ffffff;
       background-color: #e14816;
     }

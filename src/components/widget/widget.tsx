@@ -18,8 +18,7 @@ export const Widget = () => {
       {isWidgetExpanded && (
         <>
           <WidgetSlideOver />
-          {isConversationViewOpen && <WidgetConversationView />}
-
+          <WidgetConversationView />
           <WidgetNavFooter />
         </>
       )}

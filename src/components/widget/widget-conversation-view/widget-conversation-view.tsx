@@ -1,3 +1,4 @@
+import clx from "classnames";
 import { useContext } from "react";
 
 import { AppContext } from "../../../context/app-context";
@@ -129,10 +130,15 @@ const conversations: ConversationType[] = [
 ];
 
 export const WidgetConversationView = () => {
-  const { setIsConversationViewOpen } = useContext(AppContext);
+  const { isConversationViewOpen, setIsConversationViewOpen } =
+    useContext(AppContext);
 
   return (
-    <div className={styles.widgetConversationView}>
+    <div
+      className={clx(styles.widgetConversationView, {
+        [styles.widgetConversationView__Open]: isConversationViewOpen,
+      })}
+    >
       <div className={styles.widgetConversationView__Header}>
         <div className={styles.widgetConversationView__HeaderBackground}>
           <img src="./img/pattern.png" alt="background" />
